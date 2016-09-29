@@ -32,7 +32,7 @@ nav .icon-img {
   height: 50px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 50%;
+  border-radius: 50%; /* this make the round border*/
   vertical-align: middle;
   border: 1px solid black;
 }
@@ -40,6 +40,7 @@ nav .icon-img {
 nav ul {
   display: inline-block;
   list-style: none;
+  padding-left: 0; /*lists automatically have space - to make this go away make a 0 px padding */
 }
 
 nav li {
@@ -48,7 +49,7 @@ nav li {
 
 nav li::after {
   content: "|";
-  margin-left: 5px;
+  margin-left: 5px; /*how does the nav bar now where to go?*/
 }
 
 nav a:hover {
@@ -57,7 +58,7 @@ nav a:hover {
 
 body {
   background: url(../images/outerspace_landscape.jpeg) no-repeat;
-  background-size: cover;
+  background-size: 100%; /* what the difference of cover vs 100%? */
 }
 
 main {
@@ -77,13 +78,13 @@ main {
 
 
 .spacecat, .spacedog {
-  position: absolute;
+  position: absolute /*I guess absolute really just means opposite?/*relative if you did this, it would align with the cat but with negative space*/;/*inline-block;*/ /* inline block would make them right next to each other */
   width: 200px;
 }
 
 .spacecat {
   top: -90px;
-  left: -90px;
+  left: -90px; /* this is saying to make it inline with the green box but negative pixels */ 
 }
 
 .spacedog {
@@ -91,13 +92,13 @@ main {
   right: -60px;
 }
 /* my code below */
-/*
+
 nav {
 	 height: 60px;
 	 background-color: grey;
 	 position: fixed;
 	 width: 100%
-/*  text-align: left;*/
+/*  text-align: left;
 }/*
 .header {
 	position: absolute;
